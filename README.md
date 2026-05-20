@@ -5,7 +5,7 @@ This only works on Dolphin and the Gamecube version of Serious Sam: Next Encount
 
 Works on Windows and maybe Linux, but most likely does not work on Mac as of this moment. 
 
-
+This program was designed to work with ``Serious Sam - Next Encounter (USA) (Rev 1).nkit.iso``. Other versions of the game has yet to be tested.
 
 ## How To Use
 
