@@ -6,7 +6,7 @@ This only works on Dolphin and the Gamecube version of Serious Sam: Next Encount
 
 Works of Windows and maybe Linux, but most likely does not work on Mac as of this moment. 
 
-
+This program will work for ``Serious Sam - Next Encounter (USA) (Rev 1).ciso`` and ``Serious Sam - Next Encounter (USA) (Rev 1).nkit.iso``. Other versions have not been tested.
 
 ## How To Use
 
@@ -17,6 +17,8 @@ Works of Windows and maybe Linux, but most likely does not work on Mac as of thi
 		 - Your new "Target" should look something like ``"path\to\Dolphin\folder\Dolphin.exe" -e "path/to/Serious/Sam/rom" --debug``
        
 		 - This will  help you in being able to manually clear Dolphin's JIT cache, which may be important for you.
+       
+     - If you are using Linux, you can enable debug mode for Dolphin through opening the emulator through the terminal with the ``-d`` flag. Altogether, it should look like ``dolphin-emu -d`` or ``flatpak run org.DolphinEmu.dolphin-emu -d`` if you installed via a flatpak.
 
 <br>
 
