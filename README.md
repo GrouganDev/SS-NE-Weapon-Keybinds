@@ -42,9 +42,9 @@ Works of Windows and maybe Linux, but most likely does not work on Mac as of thi
 <br>
 
 5) So long as the program is hooked to Dolphin, the weapon binds should work out of the box. If you wish to change them, you can edit the ``main.py`` file to manually edit weapon bindings. 
-	- If you do edit your bindings and wish to compile the new version of your ``main.py`` script into a new executable, simple run the ``compile_python.bat`` file if you're on Windows or ``compile_python.sh`` if you're on Linux.
+	- If you do edit your bindings and wish to compile the new version of your ``main.py`` script into a new executable, run the ``python_setup.bat`` file if you're on Windows or ``python_setup.sh`` if you're on Linux. This should ensure that you have all of the files necessary along with a proper virtual environment. Then, run the ``compile_python`` script that suits your OS to compile your script into an executable.
 
-		- Note: You must have [Python](https://www.python.org/downloads/) installed on your computer in order to do this. This program was created with Python 3.12.4, but later versions may work as well. If you do not have Python installed on your computer, this program will not work. 
+		- Note: You must have [Python](https://www.python.org/downloads/) installed on your computer in order to do this. This program was created with Python 3.12.4, but later versions also work. If you do not have Python installed on your computer, these scripts will not work. 
 
 
 
