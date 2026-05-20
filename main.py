@@ -94,6 +94,7 @@ def updateWeaponWord(currentWeapon, altWeapon):
         pass
 
 
+#Only two weapons can be in any given "group"
 def assignWeaponGroup(first, second, currentWeapon):
     current = 0
     alt = 0
@@ -127,6 +128,8 @@ WEAPON INDICES:
 """
 
 
+## Both keyboard and mouse monitoring is done through pynput
+## Doumentation can be found here: https://pynput.readthedocs.io/en/latest/
 
 
 ## READING KEYBOARD INPUT
@@ -208,12 +211,20 @@ def on_click(x, y, button, pressed):
     global altWeapon
 
     if pressed:
-        match button:
-            case Button.x2:
-                currentWeapon, altWeapon = assignWeaponGroup(0x00000007, 0x00000008, currentWeapon=currentWeapon)
+        if os.name == 'nt':
+            match button:
+                case Button.x2:
+                    currentWeapon, altWeapon = assignWeaponGroup(0x00000007, 0x00000008, currentWeapon=currentWeapon)
 
-            case Button.x1:
-                currentWeapon, altWeapon = assignWeaponGroup(0x0000000A, 0x00000009, currentWeapon=currentWeapon)
+                case Button.x1:
+                    currentWeapon, altWeapon = assignWeaponGroup(0x0000000A, 0x00000009, currentWeapon=currentWeapon)
+        else:
+            match button:
+                case Button.button9:
+                    currentWeapon, altWeapon = assignWeaponGroup(0x00000007, 0x00000008, currentWeapon=currentWeapon)
+
+                case Button.button9:
+                    currentWeapon, altWeapon = assignWeaponGroup(0x0000000A, 0x00000009, currentWeapon=currentWeapon)
 
         updateWeaponWord(currentWeapon=currentWeapon, altWeapon=altWeapon)
 
@@ -250,10 +261,12 @@ async def main():
 
     hooked = await hookToDolphin()
 
+    
     if not hooked:
         print("Game not loaded. Closing shortly...")
         await asyncio.sleep(3)
         sys.exit(0)
+    
 
     await printMenu()
 
