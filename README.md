@@ -4,7 +4,9 @@ An external tool which hooks into Dolphin, similar to the [Dolphin Mouse Injecto
 
 This only works on Dolphin and the Gamecube version of Serious Sam: Next Encounter.
 
-Works of Windows and maybe Linux, but most likely does not work on Mac as of this moment. Do note that there is currently no Linux version of Dolphin Mouse Injector, so your milage with this program on Linux may be minimal.
+Works for Linux, but most likely does not work on Mac as of this moment. Do note that there is currently no Linux version of Dolphin Mouse Injector, so your milage with this program on Linux may be minimal.
+
+It also works for Windows too, but you should use [this program](https://github.com/GrouganDev/SS-NE-Mouse-and-Weapon-Binds-Injector) instead as it is more up to date and comes with proper mouse control.
 
 This program will work for ``Serious Sam - Next Encounter (USA) (Rev 1).ciso`` and ``Serious Sam - Next Encounter (USA) (Rev 1).nkit.iso``. Other versions have not been tested.
 
